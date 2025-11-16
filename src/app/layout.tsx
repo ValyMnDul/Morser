@@ -25,13 +25,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html 
+    lang="en"
+    >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-800`}
+      className={`${geistSans.variable} ${geistMono.variable} 
+      antialiased bg-zinc-800 w-screen h-screen flex flex-1 flex-col`}
       >
         <Navbar />
         {children}
+
       </body>
+      
     </html>
   );
 }
