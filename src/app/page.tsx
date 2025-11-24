@@ -11,6 +11,15 @@ export default function MainPage(){
 
         if(action === "encode"){
             console.log("Encoding..." + text );
+
+            const res = await fetch('/api/encode',{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json",
+                },
+                body:JSON.stringify({text:text})
+            });
+
         }
 
         if(action === "decode"){
