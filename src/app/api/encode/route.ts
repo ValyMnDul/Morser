@@ -5,12 +5,13 @@ export const POST = async (req:NextRequest) => {
 
     const encodeLib: Record<string,string> = encode;
 
-    const text:string = (await req.json()).text; // text = hello
+    const text:string = (await req.json()).text;
 
-    const textChars = text.toLowerCase().split(''); // ['h','e','l','l','0']
+    const textChars = text.toLowerCase().split('');
     
-    for(const char of textChars){
-        console.log(encodeLib[char])
-    }
+    const outputFromServer = textChars.map((char) => (
+        encodeLib[char] !== undefined ? encodeLib[char] : "<Unknown>"
+    )).join("  ");
 
+    return NextResponse.json({outputFromServer},{status:200})
 }

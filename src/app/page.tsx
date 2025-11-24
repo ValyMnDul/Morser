@@ -1,7 +1,9 @@
 'use client'
-import { useRef,useEffect } from "react"
+import { useRef, useState ,useEffect } from "react"
 
 export default function MainPage(){
+
+    const [output,setOutput] = useState<string>("");
 
     const textRef = useRef<HTMLTextAreaElement>(null);
 
@@ -19,6 +21,9 @@ export default function MainPage(){
                 },
                 body:JSON.stringify({text:text})
             });
+
+            const {outputFromServer} = await res.json();
+            setOutput(outputFromServer);
 
         }
 
@@ -78,13 +83,14 @@ export default function MainPage(){
             autoFocus
             placeholder="Type or paste text here..."
             className="bg-zinc-700 text-zinc-100 w-[40%] h-[300px] resize-none
-            outline-none rounded-lg p-2 text-[21px] min-w-[200px]"
+            outline-none rounded-lg py-1 px-3 text-[21px] min-w-[200px]"
             ></textarea>
 
             <textarea
             id="output"
+            value={output}
             className="bg-zinc-700 text-zinc-100 w-[40%] h-[300px] resize-none
-            outline-none rounded-lg p-2 text-[21px] min-w-[200px]"
+            outline-none rounded-lg py-1 px-3 text-[21px] min-w-[200px]"
             readOnly
             title="You can&apos;t type here! Just for output."
             ></textarea>
