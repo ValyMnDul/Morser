@@ -1,20 +1,28 @@
+'use client'
 import Link from "next/link"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function Navbar(){
+
+    const router = useRouter();
 
     return(
         <nav
         className="w-full h-20 flex justify-evenly items-center"
         >
             <div
-            className="text-zinc-100 text-2xl"
+            className="text-zinc-100 text-2xl cursor-pointer"
+            onClick={()=>{
+                router.push('/');
+            }}
             >
                 <Image
-                src='vercel.svg'
+                src='/vercel.svg'
                 alt="Logo"
                 width={30}
                 height={30}
+                className="w-8 h-8"
                 ></Image>
             </div>
 
