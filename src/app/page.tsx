@@ -22,13 +22,28 @@ export default function MainPage(){
                 body:JSON.stringify({text:text})
             });
 
-            const {outputFromServer} = await res.json();
-            setOutput(outputFromServer);
+            if(res.status === 200){
+                const {outputFromServer} = await res.json();
+                setOutput(outputFromServer);
+            }
 
         }
 
         if(action === "decode"){
             console.log("Decoding..." + text );
+
+            const res = await fetch('/api/decode',{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify({text:text})
+            });
+
+            if(res.status === 200){
+                const {outputFromTheServer} = await res.json();
+                setOutput(outputFromTheServer);
+            }
         }
     }
 

@@ -6,6 +6,7 @@ export const POST = async (req:NextRequest) => {
     const encodeLib: Record<string,string> = encode;
 
     const text:string = (await req.json()).text;
+    console.log("\"" + text + "\"")
 
     const textChars = text.toLowerCase().split('');
     
