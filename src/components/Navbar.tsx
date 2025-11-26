@@ -9,10 +9,10 @@ export default function Navbar(){
 
     return(
         <nav 
-        className="w-full h-20"
+        className="w-full h-20 shrink-0"
         >
             <div 
-            className="max-w-7xl mx-auto h-full px-6 flex justify-between 
+            className="max-w-7xl mx-auto h-full px-6 flex flex-1 justify-between 
             items-center">
                  
                 <div
