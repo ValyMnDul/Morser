@@ -1,8 +1,8 @@
 export default function About(){
+
     return (
         <main
-        className="w-full min-h-screen px-10 py-16 flex flex-1 flex-col items-center
-        gap-12 overflow-y-auto"
+        className="w-full min-h-screen px-10 py-16 flex flex-1 flex-col items-center gap-12"
         >
             <h1
             className="text-5xl text-zinc-100 font-mono text-center"
@@ -102,7 +102,7 @@ export default function About(){
                             <span
                             className="text-lg"
                             >
-                                Dah (dash) a long signal (3x the length of a dot)
+                                Dah (dash) - a long signal (3x the length of a dot)
                             </span>
 
                         </div>
@@ -118,103 +118,6 @@ export default function About(){
                         making transmission more efficient.
 
                     </p>
-
-                </section>
-
-                <section
-                className="flex flex-col gap-4"
-                >
-                    <h2
-                    className='text-3xl text-yellow-200 font-mono'
-                    >
-                        Fun Facts
-                    </h2>
-
-                    <div
-                    className="grid md:grid-cols-2 gap-4"
-                    >
-                        <div
-                        className='bg-zinc-700 rounded-lg p-5 hover:bg-zinc-600
-                        transition-colors'
-                        >
-                            <h3
-                            className="text-xl text-yellow-200 font-semibold mb-2"
-                            >
-                                Titanic&apos;s Last Words
-                            </h3>
-
-                            <p
-                            className="text-sm leading-relaxed"
-                            >
-                                The Titanic sent distress signals in Morse code 
-                                before sinking in 1912. The operator 
-                                worked until the very end, sending SOS messages.
-                            </p>
-
-                        </div>
-
-                        <div
-                        className="bg-zinc-700 rounded-lg p-5 hover:bg-zinc-600
-                        transition-colors"
-                        >
-                            <h3
-                            className="text-xl text-yellow-200 font-semibold mb-2"
-                            >
-                                Still Used Today
-                            </h3>
-
-                            <p
-                            className="text-sm leading-relaxed"
-                            >
-                                Amateur radio operators worldwide still use Morse code. 
-                                It can travel farther than voice 
-                                in poor conditions and requires less power.
-                            </p>
-
-                        </div>
-
-                        <div
-                        className="bg-zinc-700 hover:bg-zinc-600 rounded-lg p-5
-                        transition-colors"
-                        >
-                            <h3
-                            className="text-xl text-yellow-200 font-semibold mb-2"
-                            >
-                                Secret Communication
-                            </h3>
-
-                            <p
-                            className="text-sm leading-relaxed"
-                            >
-                                POWs in Vietnam blinked Morse code during filmed propaganda to 
-                                send hidden messages. 
-                                Jeremiah Denton blinked &quot;T-O-R-T-U-R-E&quot; during a 1966 
-                                interview.
-                            </p>
-
-                        </div>
-
-                        <div
-                        className="bg-zinc-700 rounded-lg p-5 hover:bg-zinc-600
-                        transition-colors"
-                        >
-                            <h3
-                            className="text-xl text-yellow-200 font-semibold mb-2"
-                            >
-                                Lightning Fast
-                            </h3>
-
-                            <p
-                            className="text-sm leading-relaxed"
-                            >
-                                Expert operators can transmit 40-50 words per minute 
-                                in Morse code, which is faster 
-                                than most people can write by hand!
-                            </p>
-
-                        </div>
-
-                    </div>
 
                 </section>
 
@@ -319,6 +222,124 @@ export default function About(){
                     </div>
 
                 </section>
+
+                <section
+                className="flex flex-col gap-4"
+                >
+                    <h2
+                    className='text-3xl text-yellow-200 font-mono'
+                    >
+                        Fun Facts
+                    </h2>
+
+                    <div
+                    className="grid md:grid-cols-2 gap-4"
+                    >
+                        <div
+                        className='bg-zinc-700 rounded-lg p-5 hover:bg-zinc-600
+                        transition-colors'
+                        >
+                            <h3
+                            className="text-xl text-yellow-200 font-semibold mb-2"
+                            >
+                                Titanic&apos;s Last Words
+                            </h3>
+
+                            <p
+                            className="text-sm leading-relaxed"
+                            >
+                                The Titanic sent distress signals in Morse code 
+                                before sinking in 1912. The operator 
+                                worked until the very end, sending SOS messages.
+                            </p>
+
+                        </div>
+
+                        <div
+                        className="bg-zinc-700 rounded-lg p-5 hover:bg-zinc-600
+                        transition-colors"
+                        >
+                            <h3
+                            className="text-xl text-yellow-200 font-semibold mb-2"
+                            >
+                                Still Used Today
+                            </h3>
+
+                            <p
+                            className="text-sm leading-relaxed"
+                            >
+                                Amateur radio operators worldwide still use Morse code. 
+                                It can travel farther than voice 
+                                in poor conditions and requires less power.
+                            </p>
+
+                        </div>
+
+                        <div
+                        className="bg-zinc-700 hover:bg-zinc-600 rounded-lg p-5
+                        transition-colors"
+                        >
+                            <h3
+                            className="text-xl text-yellow-200 font-semibold mb-2"
+                            >
+                                Secret Communication
+                            </h3>
+
+                            <p
+                            className="text-sm leading-relaxed"
+                            >
+                                POWs in Vietnam blinked Morse code during filmed propaganda to 
+                                send hidden messages. 
+                                Jeremiah Denton blinked &quot;T-O-R-T-U-R-E&quot; during a 1966 
+                                interview.
+                            </p>
+
+                        </div>
+
+                        <div
+                        className="bg-zinc-700 rounded-lg p-5 hover:bg-zinc-600
+                        transition-colors"
+                        >
+                            <h3
+                            className="text-xl text-yellow-200 font-semibold mb-2"
+                            >
+                                Lightning Fast
+                            </h3>
+
+                            <p
+                            className="text-sm leading-relaxed"
+                            >
+                                Expert operators can transmit 40-50 words per minute 
+                                in Morse code, which is faster 
+                                than most people can write by hand!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section
+                className="flex flex-col gap-4 items-center text-center"
+                >
+                    <div
+                    className="text-6xl text-yellow-200 font-mono"
+                    >
+                        · · · − − − · · ·
+                    </div>
+
+                    <p
+                    className="text-lg text-zinc-400"
+                    >
+                        Start translating and discover the beauty of Morse code!
+                    </p>
+
+                </section>
+
+                <div
+                className="h-[50px]"
+                ></div>
 
             </div>
 
