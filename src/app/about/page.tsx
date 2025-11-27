@@ -29,7 +29,7 @@ export default function About(){
                     </h2>
 
                     <p
-                    className="text-lg leading-relaxed"
+                    className="text-[20px] leading-relaxed"
                     >
                         Morse code is a method of transmitting text information as a 
                         series of on-off tones, lights, or clicks. 
@@ -45,7 +45,7 @@ export default function About(){
                     </p>
 
                     <p
-                    className="text-lg leading-relaxed"
+                    className="text-[20px] leading-relaxed"
                     >
                         The famous distress signal &nbsp;
 
@@ -83,7 +83,7 @@ export default function About(){
                             </span>
 
                             <span
-                            className="text-lg"
+                            className="text-[20px]"
                             >
                                 Dit (dot) - short signal
                             </span>
@@ -100,7 +100,7 @@ export default function About(){
                             </span>
 
                             <span
-                            className="text-lg"
+                            className="text-[20px]"
                             >
                                 Dah (dash) - a long signal (3x the length of a dot)
                             </span>
@@ -110,7 +110,7 @@ export default function About(){
                     </div>
 
                     <p
-                    className="text-lg leading-relaxed"
+                    className="text-[20px] leading-relaxed"
                     >
                         Letters are separated by short pauses, and words by 
                         longer pauses. The most common letters 
@@ -134,7 +134,7 @@ export default function About(){
                     className="bg-zinc-700 rounded-lg p-6 flex flex-col gap-4"
                     >
                         <p
-                        className="text-lg leading-relaxed"
+                        className="text-[20px] leading-relaxed"
                         >
                             This translator was built to help people learn and use 
                             Morse code easily. Whether you&apos;re 
@@ -153,10 +153,10 @@ export default function About(){
                             </h3>
 
                             <ul
-                            className="list-none space-y-2 ml-4"
+                            className="list-none space-y-2 ml-4 text-[18px]"
                             >
                                 <li
-                                className="flex items-start gap-2"
+                                className="flex items-start gap-2 text-center"
                                 >
                                     <span
                                     className="text-yellow-200 mt-1"
@@ -246,7 +246,7 @@ export default function About(){
                             </h3>
 
                             <p
-                            className="text-sm leading-relaxed"
+                            className="text-[16px] leading-relaxed"
                             >
                                 The Titanic sent distress signals in Morse code 
                                 before sinking in 1912. The operator 
@@ -266,7 +266,7 @@ export default function About(){
                             </h3>
 
                             <p
-                            className="text-sm leading-relaxed"
+                            className="text-[16px] leading-relaxed"
                             >
                                 Amateur radio operators worldwide still use Morse code. 
                                 It can travel farther than voice 
@@ -286,7 +286,7 @@ export default function About(){
                             </h3>
 
                             <p
-                            className="text-sm leading-relaxed"
+                            className="text-[16px] leading-relaxed"
                             >
                                 POWs in Vietnam blinked Morse code during filmed propaganda to 
                                 send hidden messages. 
@@ -307,7 +307,7 @@ export default function About(){
                             </h3>
 
                             <p
-                            className="text-sm leading-relaxed"
+                            className="text-[16px] leading-relaxed"
                             >
                                 Expert operators can transmit 40-50 words per minute 
                                 in Morse code, which is faster 
