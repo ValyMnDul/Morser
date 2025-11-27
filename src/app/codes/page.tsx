@@ -1,7 +1,12 @@
+'use client'
 import encode from '@/lib/encode.json'
+import { useMorseSound } from '@/hooks/useMorseSound';
+
 export default function Codes(){
 
     const morseCode:Record<string,string> = encode;
+
+    const {playMorseCode} = useMorseSound();
 
     const letters = Object.entries(morseCode).filter(([key]) => (/[a-z]/.test(key)));
     const numbers = Object.entries(morseCode).filter(([key]) => (/[0-9]/.test(key)));
@@ -43,7 +48,10 @@ export default function Codes(){
                                 key={char}
                                 className='bg-zinc-700 rounded-lg p-4 flex flex-col 
                                 items-center justify-center gap-2 hover:bg-zinc-600
-                                transition-colors'
+                                transition-colors cursor-pointer'
+                                onClick={() => {
+                                    playMorseCode(code);
+                                }}
                                 >
                                     <span
                                     className='text-3xl text-zinc-100 font-bold uppercase'
@@ -80,9 +88,11 @@ export default function Codes(){
                                 key={char}
                                 className='bg-zinc-700 rounded-lg p-4 flex flex-col 
                                 items-center justify-center gap-2 hover:bg-zinc-600 
-                                transition-colors'
+                                transition-colors cursor-pointer'
+                                onClick={() => {
+                                    playMorseCode(code);
+                                }}
                                 >
-
                                     <span
                                     className='text-3xl text-zinc-100 font-bold'
                                     >
@@ -119,7 +129,10 @@ export default function Codes(){
                                 key={char}
                                 className="bg-zinc-700 rounded-lg p-4 flex flex-col 
                                 items-center justify-center gap-2 hover:bg-zinc-600 
-                                transition-colors"
+                                transition-colors cursor-pointer"
+                                onClick={() => {
+                                    playMorseCode(code); 
+                                }}
                                 >
                                     <span
                                     className='text-3xl text-zinc-100 font-bold'

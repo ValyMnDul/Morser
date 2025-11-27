@@ -1,3 +1,4 @@
+'use client'
 import { useRef } from 'react'
 
 declare global {
@@ -9,6 +10,7 @@ declare global {
 export function useMorseSound(){
 
     const audioContextRef = useRef<AudioContext|null>(null);
+    const unitTime = 100;
 
     const getAudioContext = () => {
         if (!audioContextRef.current) {
@@ -34,36 +36,41 @@ export function useMorseSound(){
         oscilator.connect(gainNote);
         gainNote.connect(audioContext.destination);
 
-        oscilator.frequency.value = 600;
+        oscilator.frequency.value = 550;
         oscilator.type = 'sine';
 
-        gainNote.gain.setValueAtTime(0.3,audioContext.currentTime);
-        gainNote.gain.exponentialRampToValueAtTime(0.01,audioContext.currentTime + duration);
+        const now = audioContext.currentTime;
+        gainNote.gain.setValueAtTime(0, now);
+        gainNote.gain.linearRampToValueAtTime(0.3, now + 0.005);
+        gainNote.gain.setValueAtTime(0.3, now + duration / 1000 - 0.005);
+        gainNote.gain.linearRampToValueAtTime(0, now + duration / 1000);
 
-        oscilator.start(audioContext.currentTime);
-        oscilator.stop(audioContext.currentTime + duration);
+        oscilator.start(now);
+        oscilator.stop(now + duration / 1000);
     }
 
-    const playDih = () => playBeep(0.1);
-    const playDah = () => playBeep(0.3);
+    const playDih = () => playBeep(unitTime);
+    const playDah = () => playBeep(unitTime * 3);
 
     const playMorseCode = async (code:string) => {
-        for(let i = 0; i <= code.length ; i++){
+        for(let i = 0; i < code.length ; i++){
             const char = code[i];
 
             if(char === '·'){
                 playDih();
-                await new Promise(resolve => setTimeout(resolve,150));
+                await new Promise(resolve => setTimeout(resolve, unitTime));
+                await new Promise(resolve => setTimeout(resolve, unitTime));
             }
             else if(char === '−'){
                 playDah();
-                await new Promise(resolve => setTimeout(resolve,350));
+                await new Promise(resolve => setTimeout(resolve, unitTime * 3));
+                await new Promise(resolve => setTimeout(resolve, unitTime));
             }
             else if(char === ' '){
-                await new Promise(resolve => setTimeout(resolve,200));
+                await new Promise(resolve => setTimeout(resolve, unitTime * 3));
             }
             else if(char === '/'){
-                await new Promise(resolve => setTimeout(resolve,400));
+                await new Promise(resolve => setTimeout(resolve, unitTime * 7));
             }
         }
     };
