@@ -121,6 +121,205 @@ export default function About(){
 
                 </section>
 
+                <section
+                className="flex flex-col gap-4"
+                >
+                    <h2
+                    className='text-3xl text-yellow-200 font-mono'
+                    >
+                        Fun Facts
+                    </h2>
+
+                    <div
+                    className="grid md:grid-cols-2 gap-4"
+                    >
+                        <div
+                        className='bg-zinc-700 rounded-lg p-5 hover:bg-zinc-600
+                        transition-colors'
+                        >
+                            <h3
+                            className="text-xl text-yellow-200 font-semibold mb-2"
+                            >
+                                Titanic&apos;s Last Words
+                            </h3>
+
+                            <p
+                            className="text-sm leading-relaxed"
+                            >
+                                The Titanic sent distress signals in Morse code 
+                                before sinking in 1912. The operator 
+                                worked until the very end, sending SOS messages.
+                            </p>
+
+                        </div>
+
+                        <div
+                        className="bg-zinc-700 rounded-lg p-5 hover:bg-zinc-600
+                        transition-colors"
+                        >
+                            <h3
+                            className="text-xl text-yellow-200 font-semibold mb-2"
+                            >
+                                Still Used Today
+                            </h3>
+
+                            <p
+                            className="text-sm leading-relaxed"
+                            >
+                                Amateur radio operators worldwide still use Morse code. 
+                                It can travel farther than voice 
+                                in poor conditions and requires less power.
+                            </p>
+
+                        </div>
+
+                        <div
+                        className="bg-zinc-700 hover:bg-zinc-600 rounded-lg p-5
+                        transition-colors"
+                        >
+                            <h3
+                            className="text-xl text-yellow-200 font-semibold mb-2"
+                            >
+                                Secret Communication
+                            </h3>
+
+                            <p
+                            className="text-sm leading-relaxed"
+                            >
+                                POWs in Vietnam blinked Morse code during filmed propaganda to 
+                                send hidden messages. 
+                                Jeremiah Denton blinked &quot;T-O-R-T-U-R-E&quot; during a 1966 
+                                interview.
+                            </p>
+
+                        </div>
+
+                        <div
+                        className="bg-zinc-700 rounded-lg p-5 hover:bg-zinc-600
+                        transition-colors"
+                        >
+                            <h3
+                            className="text-xl text-yellow-200 font-semibold mb-2"
+                            >
+                                Lightning Fast
+                            </h3>
+
+                            <p
+                            className="text-sm leading-relaxed"
+                            >
+                                Expert operators can transmit 40-50 words per minute 
+                                in Morse code, which is faster 
+                                than most people can write by hand!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section
+                className="flex flex-col gap-4"
+                >
+                    <h2
+                    className="text-3xl text-yellow-200 font-mono"
+                    >
+                        About The Site
+                    </h2>
+
+                    <div
+                    className="bg-zinc-700 rounded-lg p-6 flex flex-col gap-4"
+                    >
+                        <p
+                        className="text-lg leading-relaxed"
+                        >
+                            This translator was built to help people learn and use 
+                            Morse code easily. Whether you&apos;re 
+                            a radio enthusiast, a history buff, or just curious about 
+                            this fascinating communication method, 
+                            this tool makes encoding and decoding simple.
+                        </p>
+
+                        <div
+                        className="flex flex-col gap-2"
+                        >
+                            <h3
+                            className="text-xl text-yellow-200 font-semibold"
+                            >
+                                Features:
+                            </h3>
+
+                            <ul
+                            className="list-none space-y-2 ml-4"
+                            >
+                                <li
+                                className="flex items-start gap-2"
+                                >
+                                    <span
+                                    className="text-yellow-200 mt-1"
+                                    >
+                                        ▸
+                                    </span>
+
+                                    <span>
+                                        Instant encoding from text to Morse code
+                                    </span>
+
+                                </li>
+
+                                <li
+                                className="flex items-start gap-2"
+                                >
+                                    <span
+                                    className="text-yellow-200 mt-1"
+                                    >
+                                        ▸
+                                    </span>
+
+                                    <span>
+                                        Real-time decoding from Morse to text
+                                    </span>
+
+                                </li>
+
+                                <li
+                                className="flex items-start gap-2"
+                                >
+                                    <span
+                                    className="text-yellow-200 mt-1"
+                                    >
+                                        ▸
+                                    </span>
+
+                                    <span>
+                                        Complete reference guide with all characters
+                                    </span>
+
+                                </li>
+
+                                <li
+                                className="flex items-start gap-2"
+                                >
+                                    <span
+                                    className="text-yellow-200 mt-1"
+                                    >
+                                        ▸
+                                    </span>
+
+                                    <span>
+                                        Keyboard shortcuts for quick encoding/decoding
+                                    </span>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
             </div>
 
         </main>

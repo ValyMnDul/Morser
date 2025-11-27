@@ -139,10 +139,24 @@ export default function Codes(){
                     </div>
 
                     <div 
-                    className='h-[100px] '
+                    className='h-[50px] '
                     ></div>
 
                 </section>
+
+                <div 
+                className="mb-12 pt-8 border-t border-gray-700 text-center"
+                >
+                    <p 
+                    className="text-gray-400 text-sm"
+                    >
+                        Morse code is a method of transmitting text information as a 
+                        series of on-off tones, lights, or clicks that can be directly 
+                        understood by a skilled listener or observer without special 
+                        equipment.
+                    </p>
+
+                </div>
 
             </div>
 
