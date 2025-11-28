@@ -1,5 +1,6 @@
 'use client'
 import { useRef, useState ,useEffect } from "react"
+import { Volume2 } from 'lucide-react';
 
 export default function MainPage(){
 
@@ -90,25 +91,62 @@ export default function MainPage(){
         </h1>
 
         <div
-        className="flex gap-5 w-full justify-center items-center flex-wrap"
+        className="flex gap-5 w-full justify-center"
         >
-            <textarea
-            id="text"
-            ref={textRef}
-            autoFocus
-            placeholder="Type or paste text here..."
-            className="bg-zinc-700 text-zinc-100 w-[40%] h-[300px] resize-none
-            outline-none rounded-lg py-1 px-3 text-[21px] min-w-[200px]"
-            ></textarea>
+            <div
+            className="flex flex-col w-[37%]"
+            >
+                <textarea
+                id="text"
+                ref={textRef}
+                autoFocus
+                placeholder="Type or paste text here..."
+                className="bg-zinc-700 text-zinc-100 w-full h-[300px] resize-none
+                outline-none rounded-t-lg py-1 px-3 text-[23px] min-w-[200px]"
+                ></textarea>  
 
-            <textarea
-            id="output"
-            value={output}
-            className="bg-zinc-700 text-zinc-100 w-[40%] h-[300px] resize-none
-            outline-none rounded-lg py-1 px-3 text-[21px] min-w-[200px]"
-            readOnly
-            title="You can&apos;t type here! Just for output."
-            ></textarea>
+                <div
+                className="bg-zinc-600 w-full h-10 rounded-b-lg px-4
+                flex items-center"
+                >
+                    <Volume2
+                    width={34}
+                    height={34}
+                    className="cursor-pointer text-zinc-900 hover:bg-zinc-700
+                    rounded-lg transition-colors p-1"
+                    />
+
+                </div>     
+
+            </div>
+
+            <div
+            className="flex flex-col w-[37%]"
+            >
+                <textarea
+                id="output"
+                value={output}
+                className="bg-zinc-700 text-zinc-100 full h-[300px] resize-none
+                outline-none rounded-t-lg py-1 px-3 text-[25px] min-w-[200px] cursor-default"
+                readOnly
+                title="You can&apos;t type here! Just for output."
+                ></textarea>
+
+                <div
+                className="bg-zinc-600 w-full h-10 rounded-b-lg px-4
+                flex items-center"
+                >
+                    <Volume2
+                    width={34}
+                    height={34}
+                    className="cursor-pointer text-zinc-900 hover:bg-zinc-700
+                    rounded-lg transition-colors p-1"
+                    />
+                    
+                </div>  
+
+            </div>
+            
         </div>
 
         <p className="text-zinc-400 text-sm">
