@@ -1,8 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <a href="https://moonshot.hackclub.com" target="_blank">
+    <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/35ad2be8c916670f3e1ac63c1df04d76a4b337d1_moonshot.png" 
+         alt="This project is part of Moonshot, a 4-day hackathon in Florida visiting Kennedy Space Center and Universal Studios!" 
+         style="width: 100%;">
+  </a>
+</div>
 
-## Getting Started
+### Morser - Morse decoder | encoder
 
-First, run the development server:
+Demo Link: [https://morser.valymnd.me/](https://morser.valymnd.me/)
+
+## About 
+Morser is a simple web application that allows users to encode plain text into Morse code and decode Morse code back into plain text. It also includes a feature to play Morse code as sound and a learning area.
+
+## Run Locally
+
+Clone the project
+
+```bash
+git clone https://github.com/valymndul/risebit.git
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +35,28 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+And you are good to go!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- Encode plain text to Morse code
+- Decode Morse code to plain text
+- Play Morse code as sound
+- Learning area for Morse code
+- Responsive design for various devices
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Howler.js
+- Vercel for deployment
+- React Icons
+- VsCode for development
+- GitHub for version control
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contribution
 
-## Deploy on Vercel
+Feel free to contribute to this project by submitting issues or pull requests. Any kind of contribution is welcome!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
