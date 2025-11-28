@@ -1,8 +1,12 @@
 'use client'
 import { useRef, useState ,useEffect } from "react"
 import { Volume2 } from 'lucide-react';
+import { useMorseSound } from "@/hooks/useMorseSound";
+import { isMorseText } from "@/functions/detectText";
 
 export default function MainPage(){
+
+    const { playMorseCode } = useMorseSound();
 
     const [output,setOutput] = useState<string>("");
 
@@ -114,6 +118,19 @@ export default function MainPage(){
                     height={34}
                     className="cursor-pointer text-zinc-900 hover:bg-zinc-700
                     rounded-lg transition-colors p-1"
+                    onClick={() => {
+                        if(textRef.current && textRef.current.value){
+
+                            const text = textRef.current.value;
+
+                            if(isMorseText(text)){
+                                playMorseCode(text);
+                            }
+                            else {
+                                console.log("PLAIN")
+                            }
+                        }
+                    }}
                     />
 
                 </div>     
@@ -141,6 +158,15 @@ export default function MainPage(){
                     height={34}
                     className="cursor-pointer text-zinc-900 hover:bg-zinc-700
                     rounded-lg transition-colors p-1"
+                    onClick={()=>{
+
+                        if(isMorseText(output)){
+                            playMorseCode(output);
+                        }
+                        else {
+                            console.log("PLAIN");
+                        }
+                    }}
                     />
                     
                 </div>  
