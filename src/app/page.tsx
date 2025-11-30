@@ -3,6 +3,7 @@ import { useRef, useState ,useEffect } from "react"
 import { Volume2 } from 'lucide-react';
 import { useMorseSound } from "@/hooks/useMorseSound";
 import { isMorseText } from "@/functions/detectText";
+import { say } from '@/functions/say';
 
 export default function MainPage(){
 
@@ -127,7 +128,7 @@ export default function MainPage(){
                                 playMorseCode(text);
                             }
                             else {
-                                console.log("PLAIN")
+                                say(text);
                             }
                         }
                     }}
@@ -164,7 +165,7 @@ export default function MainPage(){
                             playMorseCode(output);
                         }
                         else {
-                            console.log("PLAIN");
+                            say(output);
                         }
                     }}
                     />

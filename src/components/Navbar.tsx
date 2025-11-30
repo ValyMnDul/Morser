@@ -12,11 +12,11 @@ export default function Navbar(){
         className="w-full h-20 shrink-0"
         >
             <div 
-            className="max-w-7xl mx-auto h-full px-6 flex flex-1 justify-between 
+            className="max-w-7xl mx-auto h-full px-4 sm:px-6 flex flex-1 justify-between 
             items-center">
                  
                 <div
-                className="flex items-center gap-x-3 cursor-pointer group"
+                className="flex items-center gap-x-2 sm:gap-x-3 cursor-pointer group"
                 onClick={() => router.push('/')}
                 >
                     <div 
@@ -27,7 +27,7 @@ export default function Navbar(){
                         alt="Logo"
                         width={32}
                         height={32}
-                        className="w-8 h-8 group-hover:rotate-12 transition-all 
+                        className="w-6 h-6 sm:w-8 sm:h-8 group-hover:rotate-12 transition-all 
                         duration-300"
                         /> 
 
@@ -39,7 +39,7 @@ export default function Navbar(){
                     </div>
 
                     <span 
-                    className="text-2xl font-bold bg-linear-to-r from-yellow-200 
+                    className="text-lg sm:text-2xl font-bold bg-linear-to-r from-yellow-200 
                     via-yellow-300 to-yellow-400 bg-clip-text text-transparent"
                     >
                         Decoder|Encoder
@@ -48,10 +48,11 @@ export default function Navbar(){
                 </div>
 
                 <div 
-                className="flex gap-x-8 font-mono"
+                className="flex gap-x-4 sm:gap-x-8 font-mono"
                 >
                     <Link 
-                    className="text-xl text-zinc-100 relative group px-2 py-1"
+                    className="text-base sm:text-xl text-zinc-100 relative group 
+                    px-1 sm:px-2 py-1"
                     href='/codes'
                     >
                         Codes
@@ -70,7 +71,8 @@ export default function Navbar(){
                     </Link>
 
                     <Link
-                        className="text-xl text-zinc-100 relative group px-2 py-1"
+                        className="text-base sm:text-xl text-zinc-100 relative group sm:px-2 
+                        py-1 px-1"
                         href='/about'
                     >
                         About
