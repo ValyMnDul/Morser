@@ -86,28 +86,30 @@ export default function MainPage(){
 
     return(
     <main
-    className="w-full h-full px-10 flex flex-1 flex-col items-center
-    justify-center gap-10"
+    className="w-full h-full px-4 sm:px-6 md:px-10 flex flex-1 flex-col items-center
+    justify-center gap-6 sm:gap-8 md:gap-10 py-8"
     >
         <h1
-        className="text-5xl text-zinc-100 font-mono"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-zinc-100 font-mono
+        text-center px-4 mt-15 md:mt-0"
         >
             Morse Code <span className="text-yellow-200">Translator</span>
         </h1>
 
         <div
-        className="flex gap-5 w-full justify-center"
+        className="flex flex-col md:flex-row gap-5 w-full justify-center items-center
+        md:items-start"
         >
             <div
-            className="flex flex-col w-[37%]"
+            className="flex flex-col w-full md:w-[45%] lg:w-[42%] max-w-[600px]"
             >
                 <textarea
                 id="text"
                 ref={textRef}
                 autoFocus
                 placeholder="Type or paste text here..."
-                className="bg-zinc-700 text-zinc-100 w-full h-[300px] resize-none
-                outline-none rounded-t-lg py-1 px-3 text-[23px] min-w-[200px]"
+                className="bg-zinc-700 text-zinc-100 w-full h-[250px] sm:h-[300px] resize-none
+                outline-none rounded-t-lg py-1 px-3 text-lg sm:text-xl md:text-[23px] min-w-[200px]"
                 ></textarea>  
 
                 <div
@@ -117,8 +119,8 @@ export default function MainPage(){
                     <Volume2
                     width={34}
                     height={34}
-                    className="cursor-pointer text-zinc-900 hover:bg-zinc-700
-                    rounded-lg transition-colors p-1"
+                    className="sm:w-[34px] sm:h-[34px] cursor-pointer text-zinc-900 
+                    hover:bg-zinc-700 rounded-lg transition-colors p-1"
                     onClick={() => {
                         if(textRef.current && textRef.current.value){
 
@@ -139,13 +141,14 @@ export default function MainPage(){
             </div>
 
             <div
-            className="flex flex-col w-[37%]"
+            className="flex flex-col w-full md:w-[45%] lg:w-[42%] max-w-[600px]"
             >
                 <textarea
                 id="output"
                 value={output}
-                className="bg-zinc-700 text-zinc-100 full h-[300px] resize-none
-                outline-none rounded-t-lg py-1 px-3 text-[25px] min-w-[200px] cursor-default"
+                className="bg-zinc-700 text-zinc-100 w-full h-[250px] sm:h-[300px] 
+                resize-none outline-none rounded-t-lg py-1 px-3 text-lg sm:text-xl 
+                md:text-[25px] min-w-[200px] cursor-default"
                 readOnly
                 title="You can&apos;t type here! Just for output."
                 ></textarea>
@@ -176,16 +179,38 @@ export default function MainPage(){
             
         </div>
 
-        <p className="text-zinc-400 text-sm">
-            Press <kbd>Ctrl+Enter</kbd> to encode or <kbd>Shift+Enter</kbd> to decode
+        <p 
+        className="text-zinc-400 text-xs sm:text-sm text-center px-4"
+        >
+            Press{" "}
+
+            <kbd 
+            className="px-1.5 py-0.5 bg-zinc-700 rounded"
+            >
+                Ctrl+Enter
+            </kbd>
+
+            {" "}
+            to encode or{" "}
+
+            <kbd 
+            className="px-1.5 py-0.5 bg-zinc-700 rounded"
+            >
+                Shift+Enter
+            </kbd>
+            
+            {" "}
+            to decode
         </p>
 
         <div 
-        className="flex gap-x-3.5 mb-10 -mt-5"
+        className="flex flex-col sm:flex-row gap-3 sm:gap-x-3.5 mb-10 -mt-3 sm:-mt-5 w-full 
+        sm:w-auto px-4"
         >
             <button
-            className="text-2xl text-zinc-800 bg-yellow-200 px-2.5 py-1.5 rounded-lg
-            cursor-pointer"
+            className="text-lg sm:text-xl md:text-2xl text-zinc-800 bg-yellow-200 
+            px-4 sm:px-2.5 py-2 sm:py-1.5 rounded-lg
+            cursor-pointer hover:bg-yellow-300 transition-colors w-full sm:w-auto"
             onClick={()=>{
                 handler("encode");
             }}
@@ -194,8 +219,9 @@ export default function MainPage(){
             </button>
 
             <button
-            className="text-2xl text-zinc-100 border-2 px-2.5 py-1.5 rounded-lg
-            cursor-pointer"
+            className="text-lg sm:text-xl md:text-2xl text-zinc-100 border-2 px-4 
+            sm:px-2.5 py-2 sm:py-1.5 rounded-lg
+            cursor-pointer hover:bg-zinc-800 transition-colors w-full sm:w-auto"
             onClick={()=>{
                 handler("decode");
             }}
