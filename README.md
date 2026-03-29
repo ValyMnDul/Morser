@@ -1,8 +1,5 @@
-
-
-# Morser - Morse decoder | encoder
-
-## About 
+# Morser
+ 
 Morser is a simple web application that allows users to encode plain text into Morse code and decode Morse code back into plain text. It also includes a feature to play Morse code as sound and a learning 
 
 ## Features
@@ -27,5 +24,9 @@ Morser is a simple web application that allows users to encode plain text into M
 ## Contribution
 
 Feel free to contribute to this project by submitting issues or pull requests. Any kind of contribution is welcome!
+
+## License
+
+This project is licensed under the [MIT LICENSE](LICENSE.md)
 
 ### Made for Moonshot event, Hosted by HackClub
